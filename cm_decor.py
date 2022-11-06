@@ -4,7 +4,7 @@ from functools import wraps
 
 
 @dataclass
-class Decorator:
+class CmDecorator:
     name: str
 
     def __call__(self, fn):
@@ -17,4 +17,4 @@ class Decorator:
         return wrapper
 
 
-cm = Decorator('cm')
+cm = CmDecorator('cm')

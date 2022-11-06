@@ -9,7 +9,7 @@ pip install cm_decor
 ## Usage
 
 ```python
-from cm_decor import cm, Decorator
+from cm_decor import cm, CmDecorator
 
 
 @cm
@@ -18,7 +18,7 @@ def f(*, cm):
     f.write('hi')
 
 
-estack = Decorator('estack')
+estack = CmDecorator('estack')
 
 
 @estack
