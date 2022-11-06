@@ -1,8 +1,8 @@
 from contextlib import contextmanager
 
-import ct
+import cm_decor
 
-estack = ct.Decorator('estack')
+estack = cm_decor.Decorator('estack')
 
 
 @contextmanager

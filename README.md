@@ -1,15 +1,16 @@
-# ct_decor
+# cm_decor
 
 ## Install
 
 ```commandline
-pip install ct_decor
+pip install cm_decor
 ```
 
 ## Usage
 
 ```python
-from ct import cm, Decorator
+from cm_decor import cm, Decorator
+
 
 @cm
 def f(*, cm):
@@ -18,6 +19,7 @@ def f(*, cm):
 
 
 estack = Decorator('estack')
+
 
 @estack
 def f(*, estack):

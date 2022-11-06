@@ -17,5 +17,4 @@ class Decorator:
         return wrapper
 
 
-ct = Decorator('ct')
 cm = Decorator('cm')
