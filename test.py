@@ -2,7 +2,7 @@ from contextlib import contextmanager
 
 import cm_decor
 
-estack = cm_decor.CmDecorator('estack')
+estack = cm_decor.InExitStack('estack')
 
 
 @contextmanager
