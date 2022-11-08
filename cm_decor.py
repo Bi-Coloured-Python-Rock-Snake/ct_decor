@@ -1,20 +1,18 @@
 from contextlib import ExitStack
-from dataclasses import dataclass
 from functools import wraps
 
 
-@dataclass
-class InExitStack:
-    name: str
-
-    def __call__(self, fn):
+def exitstack(name: str):
+    def decorate(fn):
         @wraps(fn)
         def wrapper(*args, **kw):
             with ExitStack() as stack:
-                kw[self.name] = stack
+                kw[name] = stack
                 return fn(*args, **kw)
 
         return wrapper
 
+    return decorate
 
-cm = InExitStack('cm')
+
+cm = exitstack('cm')

@@ -9,7 +9,7 @@ pip install cm_decor
 ## Usage
 
 ```python
-from cm_decor import cm, InExitStack
+from cm_decor import cm, ExitStackDecorator
 
 
 @cm
@@ -18,7 +18,7 @@ def f(*, cm):
     f.write('hi')
 
 
-estack = InExitStack('estack')
+estack = ExitStackDecorator('estack')
 
 
 @estack

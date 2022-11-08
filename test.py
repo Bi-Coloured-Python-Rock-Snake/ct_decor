@@ -1,8 +1,6 @@
 from contextlib import contextmanager
 
-import cm_decor
-
-estack = cm_decor.InExitStack('estack')
+from cm_decor import exitstack
 
 
 @contextmanager
@@ -11,7 +9,7 @@ def cm():
     yield
 
 
-@estack
+@exitstack('estack')
 def f(*, estack):
     estack.enter_context(cm())
     return 1
